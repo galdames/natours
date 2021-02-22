@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  // background-color: #eee;
   margin: 0 auto;
   
   &:not(:last-child) {
@@ -9,25 +8,13 @@
 
   @include clearfix;
 
-  // ^ start
-  // * contains
-  // $ end
   [class^="col-"] {
-    // background-color: orangered;
     float: left;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
   }
-
-  // @each $number in 1, 2, 3, 4 {
-  //   @each $secondNumber in 1, 2, 3, 4 {
-  //     .col-#{$number}-of-#{$secondNumber} {
-  //       width: calc((100% - #{$secondNumber - $number} * #{$gutter-horizontal}) / #{$secondNumber});
-  //     }
-  //   }
-  // }
 
 
   .col-1-of-2 {
