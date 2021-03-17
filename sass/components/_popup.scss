@@ -27,6 +27,16 @@
   &__left {
     width: 33.3333333%;
     display: table-cell;
+    vertical-align: middle;
+    
+    @include respond(tab-port) {
+      vertical-align: middle;
+      padding: .5rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__right {
@@ -34,6 +44,21 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    
+    @include respond(tab-port) {
+      padding: 3rem 1rem;
+    }
+    
+    @include respond(phone) {
+      padding: 3rem 3rem;
+
+      & .btn {
+        text-align: center;
+        width: 70%;
+        transform: translate(22%, 0);
+      }
+    }
   }
 
   &__img {
@@ -57,6 +82,16 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(phone) {
+      -moz-column-count: unset;
+      -moz-column-gap: unset;
+      -moz-column-rule: none;
+  
+      column-count: unset;
+      column-gap: unset;
+      column-rule: none;
+    }
   }
 
   &:target {
